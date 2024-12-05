@@ -207,7 +207,6 @@ const styles = {
   },
   contentContainer: {
     display: 'flex',
-    flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
     width: '100%',

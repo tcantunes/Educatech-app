@@ -166,22 +166,6 @@ const UserProfile = () => {
                 </div>
               </div>
             </div>
-            <div style={styles.watchedVideosSection}>
-              <h3 style={styles.subHeading}>Vídeos Assistidos:</h3>
-              {user.watchedVideos && user.watchedVideos.length > 0 ? (
-                <ul style={styles.videoList}>
-                  {user.watchedVideos.map((video) => (
-                    <li key={video._id} style={styles.videoListItem}>
-                      <span>{video.title}</span>
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <p style={styles.noVideos}>
-                  Você ainda não assistiu nenhum vídeo.
-                </p>
-              )}
-            </div>
           </>
         )}
       </div>
