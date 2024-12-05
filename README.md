@@ -2,35 +2,49 @@
 Este guia detalha como configurar, rodar e testar o projeto Educatech. Ele é organizado em duas partes principais: Frontend e Services, seguidas por instruções de testes e solução de problemas comuns.
 ________________________________________
 1. Requisitos do Sistema
+
 Certifique-se de que os seguintes softwares estejam instalados no sistema:
-•	Node.js (versão 16 ou superior) - Download Node.js
-•	npm (gerenciador de pacotes do Node.js)
-•	MongoDB (para o backend) - Download MongoDB
-•	Git (para versionamento) - Download Git
-•	Um navegador moderno (como Chrome ou Firefox)
+
+- Node.js (versão 16 ou superior) - Download Node.js
+- npm (gerenciador de pacotes do Node.js)
+- MongoDB (para o backend) - Download MongoDB
+- Git (para versionamento) - Download Git
+- Um navegador moderno (como Chrome ou Firefox)
 ________________________________________
 Temos duas formas de rodar o projeto:
+
 URL: https://educatech-v2.netlify.app/
+
 Usuario admin: educatech@gmail.com
+
 Ou login pelo Google com seu usuario
 
 Devido ao serviço onde está hospedado, o login demora alguns segundos
 
+
 Ou Rodar localmente:
+
 2. Clonar o Repositório
+
 Abra o terminal e clone o projeto para sua máquina local:
-# Clone o repositório
+
+## Clone o repositório
 git clone <URL-DO-REPOSITORIO>
 
-# Navegue até a pasta do projeto
+## Navegue até a pasta do projeto
 cd educatech-v2
 ________________________________________
 3. Configuração dos Microsserviços
+
 O microsserviço está configurado em Node.js e utiliza MongoDB como banco de dados.
-Temos dois microsserviços
+
+Temos dois microsserviços:
+
 Passo 1: Configurar o Ambiente
+
 1.	Navegue até a pasta do auth-service:
 cd auth-service
+
 2.	Instale as dependências:
 npm install
 
