@@ -66,27 +66,36 @@ PORT=5000
 
 
 Passo 2: Rodar o Servidor
+
 Inicie o servidor:
 npm start
+
 O servidor estará rodando em: http://localhost:5000
 
 Para rodar o microsserviço content-client:
 
 1.	Navegue até a pasta do auth-service:
 cd content-service
+
 2.	Instale as dependências:
 npm install
 
 Passo 2: Rodar o Servidor
+
 Inicie o servidor:
 npm run dev
+
 O servidor estará rodando em: http://localhost:8080
 ________________________________________
 4. Configuração do Front
+
 O frontend é construído com React.js.
+
 Passo 1: Configurar o Ambiente
+
 1.	Navegue até a pasta do frontend:
 cd ../front
+
 2.	Instale as dependências:
 npm install
 
@@ -96,26 +105,14 @@ npm start
 O frontend estará acessível em: http://localhost:3000
 ________________________________________
 5. Rodando Testes
+
 5.2 Testes do Backend
+
 1.	Certifique-se de estar na pasta de cada microsserviço:
 cd content-service ou cd auth-service
 2.	Execute os testes com o comando:
 npx jest
 ________________________________________
-
-Como adicionar videos do youtube com o usuário ADMIN:
-
-A URL usada não é a que aparece no navegador, é necessário:
-
-Clicar em compartilhar
-
- 
-
-Após clicar em incorporar:
-
- 
-
-E após selecionar o apenas link:
 
  
 
