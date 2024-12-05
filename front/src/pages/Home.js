@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 import image from '../assets/pagina-inicial.png';
 
 const Home = () => {
-  const [isMobile, setIsMobile] = useState(false); // Estado para controle da tela pequena
+  const [isMobile, setIsMobile] = useState(false); 
   const navigate = useNavigate();
 
   const loginRedirect = () => {
@@ -17,19 +17,17 @@ const Home = () => {
     navigate('/register');
   };
 
-  // Verifica o tamanho da tela
+ 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); // Definindo limite para 768px
+      setIsMobile(window.innerWidth <= 768); 
     };
 
-    // Executa ao carregar o componente
+ 
     handleResize();
 
-    // Adiciona o event listener para o redimensionamento da tela
     window.addEventListener('resize', handleResize);
 
-    // Limpeza do event listener
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
@@ -46,7 +44,6 @@ const Home = () => {
             <Button text="Cadastre-se" onClick={registerRedirect} />
           </div>
         </div>
-        {/* Condicionalmente renderiza a imagem */}
         {!isMobile && (
           <div style={styles.imageContainer}>
             <img src={image} alt="Educatech" style={styles.image} />
