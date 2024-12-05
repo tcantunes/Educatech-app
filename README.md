@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+# Guia Completo para Rodar o Projeto Educatech
+Este guia detalha como configurar, rodar e testar o projeto Educatech. Ele é organizado em duas partes principais: Frontend e Services, seguidas por instruções de testes e solução de problemas comuns.
+________________________________________
+1. Requisitos do Sistema
+Certifique-se de que os seguintes softwares estejam instalados no sistema:
+•	Node.js (versão 16 ou superior) - Download Node.js
+•	npm (gerenciador de pacotes do Node.js)
+•	MongoDB (para o backend) - Download MongoDB
+•	Git (para versionamento) - Download Git
+•	Um navegador moderno (como Chrome ou Firefox)
+________________________________________
+Temos duas formas de rodar o projeto:
+URL: https://educatech-v2.netlify.app/
+Usuario admin: educatech@gmail.com
+Ou login pelo Google com seu usuario
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Devido ao serviço onde está hospedado, o login demora alguns segundos
 
-## Available Scripts
+Ou Rodar localmente:
+2. Clonar o Repositório
+Abra o terminal e clone o projeto para sua máquina local:
+# Clone o repositório
+git clone <URL-DO-REPOSITORIO>
 
-In the project directory, you can run:
+# Navegue até a pasta do projeto
+cd educatech-v2
+________________________________________
+3. Configuração dos Microsserviços
+O microsserviço está configurado em Node.js e utiliza MongoDB como banco de dados.
+Temos dois microsserviços
+Passo 1: Configurar o Ambiente
+1.	Navegue até a pasta do auth-service:
+cd auth-service
+2.	Instale as dependências:
+npm install
 
-### `npm start`
+3.	Crie um arquivo .env com as seguintes variáveis (baseado no seu ambiente):
+PORT=5000
+MONGO_URI=mongodb://localhost:27017/educatech
+JWT_SECRET=sua_chave_secreta
+GOOGLE_CLIENT_ID=sua_google_client_id
+GOOGLE_CLIENT_SECRET=sua_google_client_secret
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Caso necessário, utilizer nossas credenciais de teste:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+	MONGO_URI=mongodb+srv://tcanarcizo:123456789t@educatech.stwca.mongodb.net/?retryWrites=true&w=majority&appName=educatech
+GOOGLE_CLIENT_ID=1039504549165-8m5t7g59mlh4m21cgkpq8qt8p9kg099q.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=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
+JWT_SECRET=123456789
+PORT=5000
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Passo 2: Rodar o Servidor
+Inicie o servidor:
+npm start
+O servidor estará rodando em: http://localhost:5000
 
-### `npm run build`
+Para rodar o microsserviço content-client:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1.	Navegue até a pasta do auth-service:
+cd content-service
+2.	Instale as dependências:
+npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Passo 2: Rodar o Servidor
+Inicie o servidor:
+npm run dev
+O servidor estará rodando em: http://localhost:8080
+________________________________________
+4. Configuração do Front
+O frontend é construído com React.js.
+Passo 1: Configurar o Ambiente
+1.	Navegue até a pasta do frontend:
+cd ../front
+2.	Instale as dependências:
+npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Passo 2: Rodar o Servidor
+Inicie o servidor frontend:
+npm start
+O frontend estará acessível em: http://localhost:3000
+________________________________________
+5. Rodando Testes
+5.2 Testes do Backend
+1.	Certifique-se de estar na pasta de cada microsserviço:
+cd content-service ou cd auth-service
+2.	Execute os testes com o comando:
+npx jest
+________________________________________
 
-### `npm run eject`
+Como adicionar videos do youtube com o usuário ADMIN:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+A URL usada não é a que aparece no navegador, é necessário:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Clicar em compartilhar
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+ 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Após clicar em incorporar:
 
-## Learn More
+ 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+E após selecionar o apenas link:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+ 
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
