@@ -35,6 +35,7 @@ cd auth-service
 npm install
 
 3.	Crie um arquivo .env com as seguintes variáveis (baseado no seu ambiente):
+
 PORT=5000
 MONGO_URI=mongodb://localhost:27017/educatech
 JWT_SECRET=sua_chave_secreta
@@ -43,7 +44,7 @@ GOOGLE_CLIENT_SECRET=sua_google_client_secret
 
 Caso necessário, utilizer nossas credenciais de teste:
 
-	MONGO_URI=mongodb+srv://tcanarcizo:123456789t@educatech.stwca.mongodb.net/?retryWrites=true&w=majority&appName=educatech
+MONGO_URI=mongodb+srv://tcanarcizo:123456789t@educatech.stwca.mongodb.net/?retryWrites=true&w=majority&appName=educatech
 GOOGLE_CLIENT_ID=1039504549165-8m5t7g59mlh4m21cgkpq8qt8p9kg099q.apps.googleusercontent.com
 GOOGLE_CLIENT_SECRET=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
 JWT_SECRET=123456789
