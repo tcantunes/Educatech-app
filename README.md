@@ -52,8 +52,11 @@ npm install
 
 PORT=5000
 MONGO_URI=mongodb://localhost:27017/educatech
+
 JWT_SECRET=sua_chave_secreta
+
 GOOGLE_CLIENT_ID=sua_google_client_id
+
 GOOGLE_CLIENT_SECRET=sua_google_client_secret
 
 Caso necessário, utilizer nossas credenciais de teste:
